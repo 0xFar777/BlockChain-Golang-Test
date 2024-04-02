@@ -20,8 +20,10 @@ import (
 每一次验证都需要三个参数:
 1.当前input的Sig字段(但不是Sig本身,而是将Sig平分拆成的两段,即"r"和"s");
    //判断交易是不是由自己的地址所发起的
+
 2.当前input的PubKey字段(但不是PubKey本身,而是PubKey.X和PubKey.Y)
    //判断交易所引用的是否是自己的UTXO
+
 3.第三个参数与签名时生成的signDataHash一模一样(一样的生成步骤,一样的结果)
    //知道对哪一个input进行验证
 
